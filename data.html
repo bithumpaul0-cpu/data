@@ -1,0 +1,602 @@
+<DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Karibuni Emergency Loans - Fast Financial Solutions</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* General Styles */
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            color: #f0f0f0;
+            background-color: #222; /* Solid dark background */
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        section {
+            background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent overlay for readability */
+            padding: 80px 0;
+            margin-bottom: 20px;
+        }
+
+        h1, h2, h3 {
+            margin-top: 0;
+            color: #ffffff; /* White text for headings */
+        }
+
+        a {
+            color: #ffde00; /* Yellow */
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: #d1b100; /* Darker yellow */
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 25px;
+            border-radius: 5px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            cursor: pointer;
+            border: none;
+        }
+
+        .btn.primary {
+            background-color: #ffde00; /* Yellow */
+            color: #000;
+        }
+
+        .btn.primary:hover {
+            background-color: #d1b100; /* Darker yellow */
+        }
+
+        .btn.secondary {
+            background-color: transparent;
+            color: #fff;
+            border: 2px solid #fff;
+        }
+        
+        .btn.secondary:hover {
+            background-color: #fff;
+            color: #000;
+        }
+        
+        /* Header */
+        header {
+            color: #fff;
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            transition: background-color 2s ease-in-out; /* Slow transition for color change */
+        }
+
+        header .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .logo-image {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin-bottom: 15px;
+            border: 5px solid #d90000; /* Red border */
+            
+            /* Initial state for animation */
+            transform: scale(0.5);
+            opacity: 0;
+            animation: fadeInAndScale 10s forwards;
+        }
+        
+        .logo-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        @keyframes fadeInAndScale {
+            0% {
+                transform: scale(0.5);
+                opacity: 0;
+            }
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+        
+        .logo h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+
+        .logo p {
+            margin: 0;
+            font-size: 14px;
+            color: #ccc;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 20px 0 0;
+            padding: 0;
+            display: flex;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav a {
+            color: #fff;
+            font-weight: bold;
+            padding: 5px 0;
+            position: relative;
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background-color: #ffde00; /* Yellow */
+            transition: width 0.3s ease;
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        .mobile-menu {
+            display: none;
+            font-size: 24px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            padding: 100px 0;
+        }
+
+        .hero h2 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            color: #ffde00; /* Yellow */
+        }
+
+        .hero p {
+            font-size: 20px;
+            max-width: 700px;
+            margin: 0 auto 40px;
+        }
+
+        .cta-buttons .btn {
+            margin: 0 10px;
+        }
+
+        /* Services Section */
+        .services {
+            padding: 80px 0;
+        }
+
+        .services h2 {
+            text-align: center;
+            font-size: 36px;
+            margin-bottom: 50px;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .service-card {
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 30px;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+            border-top: 3px solid #6007b3; /* Yellow */
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .service-card i {
+            font-size: 50px;
+            color: #d90000; /* Red */
+            margin-bottom: 20px;
+        }
+
+        .service-card h3 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        /* About Section */
+        .about {
+            padding: 80px 0;
+        }
+
+        .about h2 {
+            font-size: 36px;
+            margin-bottom: 30px;
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 80px 0;
+        }
+
+        .contact h2 {
+            text-align: center;
+            font-size: 36px;
+            margin-bottom: 50px;
+        }
+
+        .contact-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            justify-content: center;
+        }
+        
+        .contact-info, .contact-form {
+            flex: 1;
+            min-width: 300px;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 30px;
+            border-radius: 8px;
+            border-top: 3px solid #ffde00; /* Yellow */
+        }
+        
+        .contact-info h3, .contact-form h3 {
+            margin-top: 0;
+            color: #ffde00; /* Yellow */
+        }
+
+        .contact-method {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .contact-method i {
+            font-size: 30px;
+            color: #d90000; /* Red */
+            margin-right: 20px;
+        }
+
+        .contact-form .form-group {
+            margin-bottom: 20px;
+        }
+
+        .contact-form label {
+            display: block;
+            margin-bottom: 8px;
+            color: #f0f0f0;
+        }
+
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #555;
+            background-color: #333;
+            color: #fff;
+            box-sizing: border-box;
+        }
+        
+        .contact-form textarea {
+            resize: vertical;
+        }
+
+        /* Footer */
+        footer {
+            color: #ccc;
+            padding: 40px 0 20px;
+            text-align: center;
+            background-color: #000; /* Solid background */
+        }
+
+        .footer-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            text-align: left;
+            margin-bottom: 30px;
+        }
+
+        .footer-section {
+            flex-basis: 30%;
+            min-width: 250px;
+            margin: 15px;
+        }
+
+        .footer-section h3 {
+            font-size: 18px;
+            margin-bottom: 15px;
+            color: #ffde00; /* Yellow */
+        }
+
+        .footer-section ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #444;
+            padding-top: 20px;
+            margin-top: 20px;
+        }
+        
+        .notification {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px 30px;
+            border-radius: 5px;
+            display: none;
+            z-index: 1001;
+        }
+
+        /* Media Queries */
+        @media (max-width: 768px) {
+            header .container {
+                flex-direction: column;
+            }
+
+            nav {
+                display: none;
+                flex-basis: 100%;
+                text-align: center;
+                margin-top: 20px;
+            }
+
+            nav.active {
+                display: block;
+            }
+
+            nav ul {
+                flex-direction: column;
+            }
+
+            nav ul li {
+                margin: 10px 0;
+            }
+
+            .mobile-menu {
+                display: block;
+            }
+            
+            .hero h2 {
+                font-size: 36px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo-image">
+                <img src="d.jpeg"alt="Karibuni Emergency Loans Logo">
+            </div>
+            <div class="logo">
+                <h1>Karibuni Emergency Loans</h1>
+                <p>Fast financial solutions when you need them most</p>
+            </div>
+            <nav id="main-nav">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h2>Emergency Loans When You Need Them</h2>
+                <p>Our system grading has been successful due to your cooperation. We are BACK for serious business!</p>
+                <div class="cta-buttons">
+                    <a href="#contact" class="btn primary">Apply Now</a>
+                    <a href="tel:0786455563" class="btn secondary">Call Us</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="services">
+        <div class="container">
+            <h2>Our Services</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <i class="fas fa-hand-holding-usd"></i>
+                    <h3>Quick Cash Loans</h3>
+                    <p>Get fast access to funds for your urgent financial needs with our streamlined application process.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-clock"></i>
+                    <h3>24/7 Availability</h3>
+                    <p>Financial emergencies don't keep regular hours. We're available whenever you need us.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-user-shield"></i>
+                    <h3>Confidential Service</h3>
+                    <p>Your privacy is our priority. All transactions and information are handled with discretion.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <h2>About Karibuni Emergency Loans</h2>
+                <p>Karibuni Emergency Loans is a trusted financial service provider dedicated to helping clients during times of financial need. Our successful system grading is a testament to the cooperation we've received from our valued clients.</p>
+                <p>We understand that emergencies happen, and we're here to provide quick, reliable financial solutions to help you through challenging times.</p>
+                <p>May God bless you in Jesus' name. Amen.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h3>Get In Touch</h3>
+                    <p>For emergency loan applications or inquiries, please reach out to us via phone or WhatsApp.</p>
+                    
+                    <div class="contact-method">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h4>Phone Numbers</h4>
+                            <p><a href="tel:0786455563">0786 455 563</a></p>
+                            <p><a href="tel:0777652528">0777 652 528</a></p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-method">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <h4>Availability</h4>
+                            <p>24/7 Emergency Service</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <form id="contact-form" class="contact-form">
+                    <h3>Send Us a Message</h3>
+                    <div class="form-group">
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Your Message</label>
+                        <textarea id="message" name="message" rows="4" required></textarea>
+                    </div>
+                    <button type="submit" class="btn primary">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Karibuni Emergency Loans</h3>
+                    <p>Providing fast financial solutions for your emergencies.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <p><a href="tel:0786455563">0786 455 563</a></p>
+                    <p><a href="tel:0777652528">0777 652 528</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Karibuni Emergency Loans. All Rights Reserved. May God bless you in Jesus' name. Amen.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div id="notification" class="notification"></div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Mobile menu toggle
+            const mobileMenu = document.querySelector('.mobile-menu');
+            const navMenu = document.getElementById('main-nav');
+            mobileMenu.addEventListener('click', function() {
+                navMenu.classList.toggle('active');
+            });
+
+            // Form submission
+            const contactForm = document.getElementById('contact-form');
+            const notification = document.getElementById('notification');
+
+            contactForm.addEventListener('submit', function(event) {
+                event.preventDefault(); // Prevent default form submission
+
+                showNotification('Your message has been sent successfully!');
+
+                contactForm.reset();
+            });
+
+            function showNotification(message) {
+                notification.textContent = message;
+                notification.style.display = 'block';
+                // Hide the notification after 3 seconds
+                setTimeout(() => {
+                    notification.style.display = 'none';
+                }, 5000);
+            }
+
+            // Animated color change for header only
+            const header = document.querySelector('header');
+            const colors = ['#000000', 'blue', '#d90000','purple','green','maroon','gray'];
+            let colorIndex = 0;
+
+            function changeHeaderColor() {
+                header.style.backgroundColor = colors[colorIndex];
+                colorIndex = (colorIndex + 1) % colors.length;
+            }
+
+            // Change header color every 5 seconds (5000 milliseconds)
+            setInterval(changeHeaderColor, 5000);
+        });
+    </script>
+</body>
+</html>
